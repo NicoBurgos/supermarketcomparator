@@ -3,10 +3,10 @@ import { CartProduct } from './CartProduct'
 import { ProductsNotFound } from './ProductsNotFound'
 import { Brand } from './Brand'
 import { useState } from 'react'
-import {
+/* import {
 	calculateBestRoute,
 	getNearbySupermarkets,
-} from '@/lib/calculateRoutes'
+} from '@/lib/calculateRoutes' */
 
 export function Cart() {
 	const [location, setLocation] = useState(null)
@@ -17,10 +17,9 @@ export function Cart() {
 		clearCart()
 	}
 	const handleBestRoute = () => {
-		if (location) {
+		/* if (location) {
 			const cadenas = [...new Set(cart.map((item) => item.cadena))]
-			/*console.log('ruta optima', cadenas)
-			console.log(location.latitude, location.longitude)*/
+			
 			const supers = getNearbySupermarkets(
 				[location.latitude, location.longitude],
 				cadenas
@@ -43,7 +42,7 @@ export function Cart() {
 			} else {
 				console.error('Geolocation is not supported by this browser.')
 			}
-		}
+		} */
 	}
 
 	return (
