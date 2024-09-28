@@ -5,7 +5,7 @@ on:
     branches:
       - master
 jobs:
-  Build:
+  build:
     runs-on: ubuntu-24.04
     steps:
       - name: Checkout Code
@@ -17,7 +17,7 @@ jobs:
           node-version: '22'
 
       - name: Install Packages
-        uses: npm install
+        run: npm install
 
       - name: Bundle
-        uses: npm run build
+        run: npm run build
