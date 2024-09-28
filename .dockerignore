@@ -1,0 +1,10 @@
+node_modules
+.next
+.github
+
+lastdata
+scripts
+direcciones
+calculateRoutes.js
+actions.js
+supermarketAddresses.js

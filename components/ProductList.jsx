@@ -9,7 +9,7 @@ export async function ProductList({ queryProduct, currentPage, queryOrder }) {
 	)
 
 	return (
-		<div className='flex flex-col gap-5 justify-center text-center items-center w-72'>
+		<div className='flex flex-col gap-5 justify-center text-center items-center w-72 md:flex-row md:w-auto md:flex-wrap md:gap-10'>
 			{data.length < 1 ? (
 				<ProductsNotFound product={queryProduct} mode={'Search'} />
 			) : (
