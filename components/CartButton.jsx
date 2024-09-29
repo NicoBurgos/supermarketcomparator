@@ -1,9 +1,11 @@
 'use client'
 import { useState } from 'react'
 import { Cart } from './Cart'
+import { useCartStore } from '@/store/cart-store'
 
 export function CartButton() {
 	const [isCartOpen, setIsCartOpen] = useState(false)
+	const cartCount = useCartStore((state) => state.cartCount())
 	const handleToggleCart = () => {
 		setIsCartOpen(!isCartOpen)
 	}
@@ -17,7 +19,7 @@ export function CartButton() {
 				onClick={handleToggleCart}
 				className={`w-full h-full ${isCartOpen ? 'hidden' : 'block'}`}
 			>
-				Carrito
+				{`Carrito (${cartCount} Productos)`}
 			</button>
 			{isCartOpen && (
 				<div className='relative w-full h-full bg-white'>

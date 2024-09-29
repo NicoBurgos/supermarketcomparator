@@ -13,7 +13,7 @@ export function Card({ product }) {
 	return (
 		<div
 			className={clsx(
-				'relative m-4 flex w-full max-w-xs flex-col overflow-hidden rounded-lg border shadow-md md:w-60 md:h-96',
+				'relative m-4 flex w-full max-w-xs flex-col overflow-hidden rounded-lg border shadow-md md:w-56 md:h-96',
 				darkMode ? 'border-gray-700 bg-gray-800' : 'border-gray-100 bg-white'
 			)}
 		>

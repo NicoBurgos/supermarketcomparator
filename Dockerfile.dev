@@ -8,10 +8,8 @@ COPY pnpm-lock.yaml .
 RUN npm install -g pnpm 
 RUN pnpm install 
 
-# Copiar el resto de tu aplicación
 COPY . .
 
-RUN pnpm build
+EXPOSE 3000
 
-# Comando para iniciar la aplicación
-CMD ["pnpm", "start"]
+CMD ["pnpm", "run", "dev"]
