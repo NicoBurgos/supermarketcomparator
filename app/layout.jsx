@@ -3,6 +3,7 @@ import { Inter } from 'next/font/google'
 import { Title } from '@/components/Title'
 import { CartButton } from '@/components/CartButton'
 import { SpeedInsights } from '@vercel/speed-insights/next'
+import { Analytics } from '@vercel/analytics/react'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -19,6 +20,7 @@ export default function RootLayout({ children }) {
 					<Title />
 					{children}
 					<SpeedInsights />
+					<Analytics />
 				</main>
 				<footer className='text-white text-center mb-20'>
 					Última actualización de productos: 12/06/2024
