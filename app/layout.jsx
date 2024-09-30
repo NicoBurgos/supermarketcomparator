@@ -2,6 +2,7 @@ import './globals.css'
 import { Inter } from 'next/font/google'
 import { Title } from '@/components/Title'
 import { CartButton } from '@/components/CartButton'
+import { SpeedInsights } from '@vercel/speed-insights/next'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -17,6 +18,7 @@ export default function RootLayout({ children }) {
 				<main className='flex-grow px-4 '>
 					<Title />
 					{children}
+					<SpeedInsights />
 				</main>
 				<footer className='text-white text-center mb-20'>
 					Última actualización de productos: 12/06/2024
