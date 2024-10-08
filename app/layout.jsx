@@ -23,7 +23,7 @@ export default function RootLayout({ children }) {
 					<Analytics />
 				</main>
 				<footer className='text-white text-center mb-20'>
-					Última actualización de productos: 12/06/2024
+					Última actualización de productos: 05/10/2024
 				</footer>
 				<CartButton />
 			</body>

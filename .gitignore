@@ -1,6 +1,6 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 lastdata
-scripts
+
 direcciones
 calculateRoutes.js
 actions.js
@@ -10,6 +10,7 @@ supermarketAddresses.js
 /.pnp
 .pnp.js
 .yarn/install-state.gz
+.pnpm-store
 
 # testing
 /coverage

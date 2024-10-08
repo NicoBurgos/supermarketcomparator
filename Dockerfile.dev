@@ -1,15 +1,26 @@
 FROM node:22-alpine
 
+# Instalar Python y otros paquetes necesarios
+RUN apk add --no-cache python3 py3-pip firefox geckodriver
+
+# Crear un entorno virtual para Python
+RUN python3 -m venv /venv
+
+# Activar el entorno virtual e instalar las bibliotecas necesarias
+RUN /venv/bin/pip install selenium beautifulsoup4
+
+# Establecer el entorno virtual como predeterminado
+ENV PATH="/venv/bin:$PATH"
+
 WORKDIR /app
 
-COPY package.json .
+COPY package.json . 
 COPY pnpm-lock.yaml . 
 
 RUN npm install -g pnpm 
 RUN pnpm install 
 
-COPY . .
-
 EXPOSE 3000
 
+# Comando para iniciar la aplicación Node
 CMD ["pnpm", "run", "dev"]
